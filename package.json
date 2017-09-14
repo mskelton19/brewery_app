@@ -1,0 +1,24 @@
+{
+  "name": "brewery_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mskelton19/brewery_app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mskelton19/brewery_app/issues"
+  },
+  "homepage": "https://github.com/mskelton19/brewery_app#readme",
+  "dependencies": {
+    "expres": "0.0.5",
+    "express": "^4.15.4"
+  }
+}
