@@ -3,15 +3,13 @@ const app       			=   express();
 const mongoose  			=   require('mongoose');
 const bodyParser 			=		require('body-parser');
 const methodOverride 	= 	require('method-override');
+const session 				=		require('express-session');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static('publc'));
 app.use(methodOverride('_method'));
 
-app.get('/users', (req, res) => {
-	res.render(users)
-})
 
 const users = require('./controllers/users.js');
 app.use('/users', users);
