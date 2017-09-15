@@ -9,6 +9,10 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static('publc'));
 app.use(methodOverride('_method'));
 
+app.get('/users', (req, res) => {
+	res.render(users)
+})
+
 const users = require('./controllers/users.js');
 app.use('/users', users);
 

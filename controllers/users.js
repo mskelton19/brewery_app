@@ -8,7 +8,7 @@ router.use(bodyParser.urlencoded({extended:false}));
 router.use(methodOverride('_method'));
 
 router.get('/', (req, res) => {
-  console.log('hello');
+  res.render
 })
 
 
