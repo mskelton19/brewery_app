@@ -1,7 +1,16 @@
-const express   =   require ('express');
-const app       =   express();
-const mongoose  =   require('mongoose');
+const express   			=   require ('express');
+const app       			=   express();
+const mongoose  			=   require('mongoose');
+const bodyParser 			=		require('body-parser');
+const methodOverride 	= 	require('method-override');
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(express.static('publc'));
+app.use(methodOverride('_method'));
+
+const users = require('./controllers/users.js');
+app.use('/users', users);
 
 const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/breweries';
 mongoose.connect(mongoUri);
