@@ -19,6 +19,7 @@
   "homepage": "https://github.com/mskelton19/brewery_app#readme",
   "dependencies": {
     "expres": "0.0.5",
-    "express": "^4.15.4"
+    "express": "^4.15.4",
+    "mongoose": "^4.11.11"
   }
 }
