@@ -11,7 +11,7 @@ app.use(express.static('publc'));
 app.use(methodOverride('_method'));
 
 
-const users = require('./controllers/users.js');
+const users = require('./controllers/breweries.js');
 app.use('/users', users);
 
 const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/breweries';

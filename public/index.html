@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html ng-app='BreweryFinder'>
+<html ng-app='BrewFinder'>
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js'></script>
-    <script src='/js/app.js'></script>
-    <link rel='stylesheet' type='text/css' href='/css/main.css'
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src='js/app.js' charset='utf-8'></script>
   </head>
   <body ng-controller='BreweryController as brewCtrl'>
 
-    <h1>Hellurrr</h1>
+    <h1>Brewery Finder</h1>
+
+    <a ng-click='brewCtrl.findBreweries()'>Click Me</a>
 
 
   </body>
