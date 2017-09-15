@@ -6,10 +6,13 @@ app.controller('BreweryController', ['$http', function($http) {
   this.findBreweries = function(){
     $http({
       method: 'GET',
-      url: '/breweries/findBreweries'
+      url: '/breweries',
     }).then(function(response){
-      console.log(reponse.data)
-    })
+      console.log(response.data)
+    }).then(
+      function(response){
+        console.log(response);
+      })
   }
 
 
