@@ -5,12 +5,25 @@
     <title></title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src='js/app.js' charset='utf-8'></script>
+    <link rel='stylesheet' type='text/css' href='/css/main.css'>
   </head>
   <body ng-controller='BreweryController as brewCtrl'>
 
     <h1>Brewery Finder</h1>
 
-    <a ng-click='brewCtrl.findBreweries()'>Click Me</a>
+
+    <div class="search">
+      <form ng-submit='brewCtrl.findBreweries()'>
+        <input class='button' type='submit' value='Get Random Brewery'>
+      </form>
+    <div>
+
+    <ul>
+      <li ng-repeat='brewery in brewCtrl.breweries'>
+        {{breweries.data.data.name}}
+      </li>
+    </ul>
+
 
 
   </body>
