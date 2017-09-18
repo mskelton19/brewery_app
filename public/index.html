@@ -11,7 +11,6 @@
 
     <h1>Brewery Finder</h1>
 
-
     <div class="search">
       <form ng-submit='brewCtrl.findBreweries()'>
         <input class='button' type='submit' value='Get Random Brewery'>
@@ -19,8 +18,8 @@
     <div>
 
     <ul>
-      <li ng-repeat='brewery in brewCtrl.breweries'>
-        {{breweries.data.data.name}}
+      <li ng-repeat='brewery in brewCtrl.foundBrewery'>
+        {{ brewery.data }}
       </li>
     </ul>
 
