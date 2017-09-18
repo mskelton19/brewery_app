@@ -7,14 +7,12 @@ app.controller('BreweryController', ['$http', function($http) {
   this.findBreweries = function(){
     $http({
       method: 'GET',
-      url: '/breweries',
-      data: {
-        name: this.name
-      }
+      url: '/breweries'
     }).then(function(response){
       console.log(response)
-      this.foundBrewery = response.data
-      console.log(response.data.data.name)
+      this.foundBrewery = response.data.data
+      controller.breweries.push(this.foundBrewery)
+      console.log(foundBrewery)
     },
       function(err){
       })

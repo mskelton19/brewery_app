@@ -18,8 +18,10 @@
     <div>
 
     <ul>
-      <li ng-repeat='brewery in brewCtrl.foundBrewery'>
-        {{ brewery.data }}
+      <li ng-repeat='breweries in brewCtrl.breweries'>
+        <h3>{{breweries.name}}</h3>
+        <h3>{{breweries.established}}</h3>
+        <a ng-href='{{breweries.website}}'> Brewery Website</h3>
       </li>
     </ul>
 
