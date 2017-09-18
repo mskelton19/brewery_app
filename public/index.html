@@ -18,9 +18,11 @@
     <div>
 
     <ul>
-      <li ng-repeat='breweries in brewCtrl.breweries'>
-        <h3>{{breweries.name}}</h3>
-        <h3>{{breweries.established}}</h3>
+      <li class='breweries' ng-repeat='breweries in brewCtrl.breweries'>
+        <img class='breweryImg' ng-src='{{breweries.images.large}}'>
+        <!-- <h4>{{breweries.images.icon}}</h4> -->
+        <h4>{{breweries.name}}</h4>
+        <h4>{{breweries.established}}</h4>
         <a ng-href='{{breweries.website}}'> Brewery Website</h3>
       </li>
     </ul>

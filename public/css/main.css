@@ -10,3 +10,14 @@ h1 {
   background-color: tan;
   color: white;
 }
+
+.breweries {
+  border: 1px solid black;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+/*.breweryImg {
+  height: 200px;
+}*/
