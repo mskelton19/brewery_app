@@ -17,15 +17,29 @@
       </form>
     <div>
 
-    <ul>
-      <li class='breweries' ng-repeat='breweries in brewCtrl.breweries'>
-        <img class='breweryImg' ng-src='{{breweries.images.large}}'>
-        <!-- <h4>{{breweries.images.icon}}</h4> -->
-        <h4>{{breweries.name}}</h4>
-        <h4>{{breweries.established}}</h4>
-        <a ng-href='{{breweries.website}}'> Brewery Website</h3>
-      </li>
-    </ul>
+    <div class='brewery'>
+      <ul>
+        <li class='brewery' ng-repeat='breweries in brewCtrl.breweries'>
+          <img class='breweryImg' ng-src='{{breweries.images.large}}'><br>
+          <!-- <h4>{{breweries.images.icon}}</h4> -->
+          <h4>{{breweries.name}}</h4><br>
+          <h4>{{breweries.established}}</h4>
+          <a ng-href='{{breweries.website}}'> Brewery Website</a><br>
+          <form ng-submit='brewCtrl.findLocations()'>
+            <input class='button' type='submit' value='Brewery Locations'>
+          </form>
+            <ul class='locations'>
+              <li ng-repeat='locations in brewCtrl.locations'>
+                <h2>Locations</h2>
+                <h4>Location Name: {{locations[0].name}}</h4>
+                <h4>{{locations[0].locality}}</h4><br>
+
+                <h4>Location Name: {{locations[1].name}}</h4>
+                <h4>{{locations[1].locality}}</h4>
+              
+            </ul>
+        </li>
+      </ul>
 
 
 

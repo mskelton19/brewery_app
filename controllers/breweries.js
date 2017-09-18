@@ -8,21 +8,19 @@ const rp = require('request-promise');
 // const findBrewery = require('../bin/breweries.js');
 
 router.get('/', (req, res) => {
-  rp({uri: 'http://api.brewerydb.com/v2/brewery/random?key=18332a604bfda0ef56cfa29deff412f2', json: true})
+  rp({uri: 'http://api.brewerydb.com/v2/brewery/TMc6H2?key=18332a604bfda0ef56cfa29deff412f2', json: true})
     .then(function (response) {
       res.send(response)
         // Process html...
     })
-    .catch(function (err) {
-      console.log(err)
-        // Crawling failed...
-    });
-  // res.send('hello');
-  // client.beers({name: 'Tecate'}).then(function(res) {
-  //   res.send(res);
-  // }, function(err) {
-  //   res.send(err)
-  // });
-})
+  })
+
+// router.get('/', (req, res) => {
+//   rp({uri:'http://api.brewerydb.com/v2/brewery/zeWbuM/locations?key=18332a604bfda0ef56cfa29deff412f2', json: true})
+// .then(function(response) {
+//   console.log(response)
+// })
+//     });
+
 
 module.exports = router;
