@@ -25,12 +25,11 @@ ul {
   text-align: center;
 }
 
+.brewery li {
+  width: 30%;
+  display: inline-block;
+}
+
 .locations li {
   text-align: center;
 }
-
-
-
-/*.breweryImg {
-  height: 200px;
-}*/
