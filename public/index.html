@@ -10,7 +10,7 @@
   </head>
   <body ng-controller='BreweryController as brewCtrl'>
 
-    <header>
+    <header class='header'>
       <form class='loginForm' action='/login' method='POST'>
         Login: <input type='text' name='username' placeholder='username'>
         <input type='password' name='password' placeholder='password'>
@@ -19,9 +19,9 @@
     </header>
 
 
-    <li><a href='/register'>Sign Up!</a></li>
+    <!-- <li><a href='/register'>Sign Up!</a></li>
     <li><a href='login'>Login</a></li>
-    <li><a href='/logout'>Logout</a></li>
+    <li><a href='/logout'>Logout</a></li> -->
 
     <div class="search">
       <form ng-submit='brewCtrl.findBreweries()'>

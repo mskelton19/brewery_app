@@ -7,6 +7,33 @@ h1 {
 
 .loginForm {
   text-align: right;
+  height: 300px;
+  vertical-align: middle;
+}
+
+body {
+  background-image: url('https://steadyserv.com/wp-content/uploads/2017/06/breweries.jpg');
+}
+
+.breweries {
+  color: #E3A25D;
+  padding-bottom: 10px;
+}
+
+.breweries div {
+  border-radius: 10%;
+  background-color: #7E200F;
+  margin-bottom: 25px;
+}
+
+.breweries img {
+  padding-top: 15px;
+  height: 30%;
+  width: 30%;
+}
+
+.breweries a {
+  color: #C1BEB7;
 }
 
 .search {
@@ -21,6 +48,7 @@ h1 {
 ul {
   list-style-type: none;
   text-align: center;
+  padding: 0px;
 }
 
 .brewery {
