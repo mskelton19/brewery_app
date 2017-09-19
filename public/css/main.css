@@ -1,10 +1,12 @@
-body {
-  background-color: #EFBF19;
-}
+
 
 h1 {
   text-align: center;
   color: #A8201A;
+}
+
+.loginForm {
+  text-align: right;
 }
 
 .search {
@@ -22,13 +24,35 @@ ul {
 }
 
 .brewery {
+  width: 35%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.brewery div img {
+  display: block;
+  margin: 0 auto;
+  width: 75%;
+}
+
+.brewery div {
+  border: 1px solid black;
+}
+/*
+.brewery a {
   text-align: center;
 }
 
-.brewery li {
-  width: 30%;
-  display: inline-block;
+.brewery img {
+  margin: 0 auto;
+}*/
+
+.breweries {
+  border: 1px solid black;
 }
+
 
 .locations li {
   text-align: center;
