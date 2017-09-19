@@ -14,6 +14,9 @@ app.use(express.static('public'));
 const breweries = require('./controllers/breweries.js');
 app.use('/breweries', breweries);
 
+const locations = require('./controllers/locations.js');
+app.use('/locations', locations);
+
 const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/breweries';
 mongoose.connect(mongoUri);
 

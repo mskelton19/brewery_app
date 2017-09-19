@@ -1,5 +1,10 @@
+body {
+  background-color: #EFBF19;
+}
+
 h1 {
   text-align: center;
+  color: #A8201A;
 }
 
 .search {
@@ -9,4 +14,22 @@ h1 {
 .button {
   background-color: tan;
   color: white;
+}
+
+ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+.brewery {
+  text-align: center;
+}
+
+.brewery li {
+  width: 30%;
+  display: inline-block;
+}
+
+.locations li {
+  text-align: center;
 }

@@ -19,6 +19,7 @@
   "homepage": "https://github.com/mskelton19/brewery_app#readme",
   "dependencies": {
     "body-parser": "^1.18.1",
+    "bootstrap": "^4.0.0-beta",
     "ejs": "^2.5.7",
     "expres": "0.0.5",
     "express": "^4.15.4",
