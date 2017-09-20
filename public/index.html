@@ -10,19 +10,19 @@
   </head>
   <body ng-controller='BreweryController as brewCtrl'>
 
-    <!-- <header class='header'> -->
-      <!-- <h1>SudsFinder</h1> --> 
-      <!-- <form class='loginForm' action='/login' method='POST'>
+    <header class='header'>
+      <h1>SudsFinder</h1>
+      <form class='loginForm' action='/login' method='POST'>
         Login: <input type='text' name='username' placeholder='username'>
          <input type='password' name='password' placeholder='password'>
         <button>Submit</button>
-      </form> -->
-    <!-- </header> -->
+      </form>
+    </header>
 
 
       <div class="search">
         <form ng-submit='brewCtrl.findBreweries()'>
-          <input class='inputs' ng-model='brewCtrl.zip' type='text' placeholder='Zip'>
+          <input class='inputs' ng-model='brewCtrl.zip' type='text' placeholder='Zip Code' value='submit'>
           <input class='button' type='submit' value='Search Breweries'>
         </form>
       <div>
@@ -72,7 +72,7 @@
           </div>
         </div>
 
-          <form ng-submit='brewCtrl.findLocations()'>
+          <!-- <form ng-submit='brewCtrl.findLocations()'>
             <input class='button' type='submit' value='Brewery Locations'>
           </form>
             <ul class='locations'>
@@ -84,7 +84,7 @@
                 <br>
 
                 <h4>{{locations[1].name}}</h4>
-                <h4>{{locations[1].locality}}</h4>
+                <h4>{{locations[1].locality}}</h4> -->
 
             </ul>
         </li>

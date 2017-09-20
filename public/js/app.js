@@ -4,13 +4,15 @@ app.controller('BreweryController', ['$http', function($http) {
   const controller = this;
   this.breweries = [];
   this.locations = [];
-  this.zip = {}
-
+  
   this.findBreweries = function(){
     $http({
       method: 'GET',
       url: '/breweries/' + this.zip,
-      dataType:'json'
+      dataType:'json',
+        data: {
+          zip: this.zip
+        }
     }).then(function(response){
       this.foundBrewery = response.data.data
       controller.breweries.push(this.foundBrewery)
