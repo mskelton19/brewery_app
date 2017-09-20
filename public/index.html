@@ -21,7 +21,7 @@
 
 
       <div class="search">
-        <form ng-submit='brewCtrl.findBreweries()'>
+        <form ng-submit='brewCtrl.findBreweriesByZip()'>
           <input class='inputs' ng-model='brewCtrl.zip' type='text' placeholder='Zip Code' value='submit'>
           <input class='button' type='submit' value='Search Breweries'>
         </form>
@@ -31,9 +31,10 @@
       <div class='brewery'>
         <ul>
           <li data-ng-repeat='breweries in brewCtrl.breweries'>
-            <!-- <img class='breweryImg' ng-src='{{breweries.images.large}}'><br> -->
-            <!-- <h4>{{breweries.images.icon}}</h4> -->
-            <div class='breweries'>
+
+             <img class='breweryImg' ng-src='{{breweries.images.large}}'><br>
+           <h4>{{breweries.images.icon}}</h4>
+           <div class='breweries'>
             <div class='brewery1'>
               <img ng-src='{{breweries[0].brewery.images.squareMedium}}'><br>
               <a ng-href='{{breweries[0].brewery.website}}'>{{breweries[0].brewery.name}}</a>
@@ -71,6 +72,11 @@
             </div>
           </div>
         </div>
+
+        <form ng-submit='brewCtrl.findBreweriesByCity()'>
+          <input class='inputs' ng-model='brewCtrl.city' type='text' placeholder='City' value='submit'>
+          <input class='button' type='submit' value='Search Breweries'>
+        </form>
 
           <!-- <form ng-submit='brewCtrl.findLocations()'>
             <input class='button' type='submit' value='Brewery Locations'>

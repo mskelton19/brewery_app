@@ -21,6 +21,15 @@ router.get('/:postalCode', (req, res) => {
   })
 
 // router.get('/', (req, res) => {
+//   console.log(req.params)
+//   p({uri: 'http://api.brewerydb.com/v2/locations?locality=Raleigh&key=18332a604bfda0ef56cfa29deff412f2', json: true})
+//     .then(function (response) {
+//       res.send(response)
+//         // Process html...
+//     })
+// })
+
+// router.get('/', (req, res) => {
 //   rp({uri:'http://api.brewerydb.com/v2/brewery/zeWbuM/locations?key=18332a604bfda0ef56cfa29deff412f2', json: true})
 // .then(function(response) {
 //   console.log(response)
