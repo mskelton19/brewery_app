@@ -10,56 +10,69 @@
   </head>
   <body ng-controller='BreweryController as brewCtrl'>
 
-    <!-- <header class='login'>
-      <div class='row'>
-        <div class='six columns'>
-          <h1>SudsFinder</h1>
-        </div> -->
-
-      <!-- <div class='six columns'>
-        <form >
-          Username <input type='text' name='username'>
-          Password <input type='text' name='password'>
-          <input type='submit' value='Login'>
-        </form>
-      </div> -->
+    <header class='header'>
+      <h1>SudsFinder</h1>
+      <form class='loginForm' action='/login' method='POST'>
+        Login: <input type='text' name='username' placeholder='username'>
+         <input type='password' name='password' placeholder='password'>
+        <button>Submit</button>
+      </form>
     </header>
 
-    <h1>Brewery Finder</h1>
 
-    <div class="search">
-      <form ng-submit='brewCtrl.findBreweries()'>
-        <input class='button' type='submit' value='Get Random Brewery'>
-      </form>
-    <div>
+      <div class="search">
+        <form ng-submit='brewCtrl.findBreweries()'>
+          <input class='inputs' ng-model='brewCtrl.zip' type='text' placeholder='Zip Code' value='submit'>
+          <input class='button' type='submit' value='Search Breweries'>
+        </form>
+      <div>
 
-    <div class='brewery'>
-      <ul>
-        <li ng-repeat='breweries in brewCtrl.breweries'>
-          <!-- <img class='breweryImg' ng-src='{{breweries.images.large}}'><br> -->
-          <!-- <h4>{{breweries.images.icon}}</h4> -->
-          <div class='brewery1'>
-            <a ng-href='{{breweries[0].brewery.website}}'>{{breweries[0].brewery.name}}</a>
-            <h4>{{breweries[0].brewery.established}}</h4>
-          </div>
-          <div class='brewery2'>
-            <a ng-href='{{breweries[1].brewery.website}}'>{{breweries[1].brewery.name}}</a>
-            <h4>{{breweries[1].brewery.established}}</h4>
-          </div>
-          <div class='brewery3'>
+    <div class='flexcontainer'>
+      <div class='brewery'>
+        <ul>
+          <li data-ng-repeat='breweries in brewCtrl.breweries'>
+            <!-- <img class='breweryImg' ng-src='{{breweries.images.large}}'><br> -->
+            <!-- <h4>{{breweries.images.icon}}</h4> -->
+            <div class='breweries'>
+            <div class='brewery1'>
+              <img ng-src='{{breweries[0].brewery.images.squareMedium}}'><br>
+              <a ng-href='{{breweries[0].brewery.website}}'>{{breweries[0].brewery.name}}</a>
+              <h4>{{breweries[0].brewery.established}}</h4>
+              <h4>{{breweries[0].locality}}</h2>
+              <h4>{{breweries[0].hoursOfOperation}}
+            </div>
+            <div class='brewery2'>
+              <img ng-src='{{breweries[1].brewery.images.squareMedium}}'><br>
+              <a ng-href='{{breweries[1].brewery.website}}'>{{breweries[1].brewery.name}}</a>
+              <h4>{{breweries[1].brewery.established}}</h4>
+              <h4>{{breweries[1].locality}}</h2>
+              <h4>{{breweries[1].hoursOfOperation}}
+            </div>
+            <div class='brewery3'>
+              <img ng-src='{{breweries[2].brewery.images.squareMedium}}'><br>
               <a ng-href='{{breweries[2].brewery.website}}'>{{breweries[2].brewery.name}}</a>
-            <h4>{{breweries[2].brewery.established}}</h4>
+              <h4>{{breweries[2].brewery.established}}</h4>
+              <h4>{{breweries[2].locality}}</h2>
+              <h4>{{breweries[2].hoursOfOperation}}
+            </div>
+            <div class='brewery4'>
+              <img ng-src='{{breweries[3].brewery.images.squareMedium}}'><br>
+              <a ng-href='{{breweries[3].brewery.website}}'>{{breweries[3].brewery.name}}</a>
+              <h4>{{breweries[3].brewery.established}}</h4>
+              <h4>{{breweries[3].locality}}</h2>
+              <h4>{{breweries[3].hoursOfOperation}}
+            </div>
+            <div class='brewery4'>
+              <img ng-src='{{breweries[4].brewery.images.squareMedium}}'><br>
+              <a ng-href='{{breweries[4].brewery.website}}'>{{breweries[4].brewery.name}}</a>
+              <h4>{{breweries[4].brewery.established}}</h4>
+              <h4>{{breweries[4].locality}}</h2>
+              <h4>{{breweries[4].hoursOfOperation}}
+            </div>
           </div>
-          <div class='brewery4'>
-            <a ng-href='{{breweries[3].brewery.website}}'>{{breweries[3].brewery.name}}</a>
-            <h4>{{breweries[3].brewery.established}}</h4>
-          </div>
-          <div class='brewery4'>
-            <a ng-href='{{breweries[4].brewery.website}}'>{{breweries[4].brewery.name}}</a>
-            <h4>{{breweries[4].brewery.established}}</h4>
-          </div>
+        </div>
 
-          <form ng-submit='brewCtrl.findLocations()'>
+          <!-- <form ng-submit='brewCtrl.findLocations()'>
             <input class='button' type='submit' value='Brewery Locations'>
           </form>
             <ul class='locations'>
@@ -71,7 +84,7 @@
                 <br>
 
                 <h4>{{locations[1].name}}</h4>
-                <h4>{{locations[1].locality}}</h4>
+                <h4>{{locations[1].locality}}</h4> -->
 
             </ul>
         </li>
