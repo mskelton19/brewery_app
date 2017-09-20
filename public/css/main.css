@@ -1,14 +1,21 @@
+/*header {
+  background-color: B9AFA4;
+  height: 75px;
+}
 
-
-h1 {
-  text-align: center;
+header h1 {
+  text-align: left;
   color: #A8201A;
+  position: relative;
+  top: 20px;
 }
 
 .loginForm {
   text-align: right;
   height: 300px;
   vertical-align: middle;
+  position: relative;
+  top: -30px;
 }
 
 body {
@@ -16,24 +23,25 @@ body {
 }
 
 .breweries {
-  color: #E3A25D;
+  color: #942D15;
   padding-bottom: 10px;
 }
 
 .breweries div {
+  border: 2px solid #B8AC94;
   border-radius: 10%;
-  background-color: #7E200F;
+  background-color: #E99837;
   margin-bottom: 25px;
 }
 
 .breweries img {
   padding-top: 15px;
-  height: 30%;
-  width: 30%;
+  height: 50%;
+  width: 50%;
 }
 
 .breweries a {
-  color: #C1BEB7;
+  color: white;
 }
 
 .search {
@@ -52,22 +60,20 @@ ul {
 }
 
 .brewery {
-  width: 35%;
+  width: 30%;
+  height: 10%;
   margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
 }
 
-.brewery div img {
+/*.brewery div img {
   display: block;
   margin: 0 auto;
   width: 75%;
-}
+}*/
 
-.brewery div {
+/*.brewery div {
   border: 1px solid black;
-}
+}*/
 /*
 .brewery a {
   text-align: center;
@@ -77,11 +83,11 @@ ul {
   margin: 0 auto;
 }*/
 
-.breweries {
+/*.breweries {
   border: 1px solid black;
-}
+}*/
 
 
 .locations li {
   text-align: center;
-}
+}*/

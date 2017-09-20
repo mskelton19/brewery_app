@@ -9,11 +9,8 @@ app.controller('BreweryController', ['$http', function($http) {
   this.findBreweries = function(){
     $http({
       method: 'GET',
-      url: '/breweries',
-      dataType:'json',
-      data:{
-        zip: this.zip
-      }
+      url: '/breweries/' + this.zip,
+      dataType:'json'
     }).then(function(response){
       this.foundBrewery = response.data.data
       controller.breweries.push(this.foundBrewery)
