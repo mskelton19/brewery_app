@@ -8,17 +8,14 @@
 
     <h1>Users</h1>
 
-    <ul>
-      <% for(let i=0; i < user.length; i++) { %>
-        <li>
-          <%user[i].username%>
-        </li>
-      <% } %>
-    </ul>
 
-
-
-
+    <main>
+      <ul>
+        <%for(let i = 0; i < users.length; i++) { %>
+          <li><%=users[i].username%></li>
+        <% } %>
+      </ul>
+    </main>
 
 
 
