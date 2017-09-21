@@ -43,7 +43,7 @@ app.use('/users', users);
 // Auth Routes
 // show sign up form
 app.get('/register', function(req, res) {
-  res.render('register.ejs')
+  res.render('Auth/register.ejs')
 })
 
 // handle user signup
@@ -53,10 +53,10 @@ app.post('/register', function(req, res) {
 	User.register(new User({username: req.body.username}), req.body.password, function(err, user){
 		if(err){
 			console.log(err);
-			return res.render('register.ejs');
+			return res.render('Auth/register.ejs');
 		}
 		passport.authenticate('local')(req, res, function(){
-			res.render('secret.ejs');
+			res.render('/users');
 		})
 	})
 })
@@ -64,7 +64,7 @@ app.post('/register', function(req, res) {
 // login functionality
 // render login form
 app.get('/login', function(req, res) {
-	res.render('login.ejs');
+	res.render('Auth/login.ejs');
 })
 
 // Login logic
