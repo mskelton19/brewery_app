@@ -22,6 +22,12 @@
 
   </header>
 
+  <nav>
+    <a href='/register'>Sign Up</a>
+
+    <a href='/logout'>Logout</a>
+  </nav>
+
 
     <div class='container-fluid'>
       <form ng-submit='brewCtrl.findBreweriesByZip()'>
@@ -54,7 +60,7 @@
               <div class='breweries'>
                 <a ng-href='{{breweries[0].brewery.website}}'><img ng-src='{{breweries[0].brewery.images.squareMedium}}'></a>
                 <h6>{{breweries[0].brewery.name}}</h6>
-                
+
 
               </div>
               <div class='breweries'>

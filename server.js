@@ -64,7 +64,7 @@ app.post('/register', function(req, res) {
 // login functionality
 // render login form
 app.get('/login', function(req, res) {
-	res.render('login.ejs');
+	res.render('Auth/login.ejs');
 })
 
 // Login logic
