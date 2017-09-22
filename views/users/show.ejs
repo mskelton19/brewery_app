@@ -19,6 +19,7 @@
         <ul>
           <% for (let i = 0; i < user.brewery.length; i++) { %>
           <li>
+            <img src='<%=user.brewery[i].brewery.images.squareMedium%>'>
             <%=user.brewery[i].brewery.name%>
           <% } %>
         </li>
