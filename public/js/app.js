@@ -60,12 +60,12 @@ app.controller('BreweryController', ['$http', function($http) {
     })
   }
 
-  this.saveBrewery = function(){
+  this.saveBrewery = function(index){
     $http({
       method: 'POST',
       url: 'users/getBreweryData',
       data: {
-        breweryData: controller.breweries[p]
+        breweryData: controller.breweries[index]
       }
     }).then(
       function(response){

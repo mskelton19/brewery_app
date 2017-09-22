@@ -24,9 +24,11 @@ header h1 {
   width: 75%;
   color: green;
   diplay: block;
-  margin: auto;
+  margin: 0 auto;
   height: 25%;
   text-align: center;
+  position: relative;
+  right: 17px;
 }
 
 .breweries img {

@@ -30,6 +30,11 @@ passport.deserializeUser(User.deserializeUser());
 // =========
 // Routes
 // =========
+
+app.get('/test', (req, res) => {
+	res.send(req.user)
+})
+
 app.get('/secret',isLoggedIn, (req, res) => {
 	res.render('secret.ejs')
 })
