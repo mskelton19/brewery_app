@@ -17,9 +17,8 @@ body {
 }
 
 header {
-  background-color: #3A1F15;
+  background-color: #A33028;
   height: 75px;
-  margin-bottom: 10px;
   color: white;
   width: 100%;
 }
@@ -28,6 +27,16 @@ header h1 {
   position: relative;
   left: 25px;
   top: 13px;
+}
+
+
+.content {
+  position: absolute;
+  top:100px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  overflow-y:scroll;
 }
 
 .breweries {
@@ -41,7 +50,7 @@ header h1 {
   right: 20px;
   margin-bottom: 20px;
   border: 2px solid #A65735;
-  background-color: #3A1F15;
+  background-color: #C25E2A;
 }
 
 .breweries img {
@@ -66,10 +75,25 @@ form {
 
 .search {
   margin-bottom: 25px;
+  margin-top: 15px;
 }
 
 .save {
   margin-bottom: 10px;
+}
+
+nav {
+  background-color: #A33028;
+  opacity: 0.7;
+  margin-bottom: 50px;
+  color: white;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  padding-right: 30px;
+  text-align: center;
 }
 /*header {
   background-color: B9AFA4;
