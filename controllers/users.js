@@ -34,17 +34,15 @@ router.get('/', (req, res) => {
 
 router.post('/getBreweryData', (req, res) => {
   console.log('==========')
-  User.create(req.body['breweryData'], (index) => {
+  User.create(req.body['breweryData'], () => {
     User.findOne({username: req.session.username}, (err, foundUser) => {
       foundUser['brewery'].push(req.body['breweryData']);
       foundUser.save();
-      console.log('=========')
-      // console.log(foundUser['brewery']);
-      console.log('=============')
-      console.log(req.body['breweryData']);
+      console.log(foundUser);
+      // console.log('=============');
+      // console.log(req.body['breweryData']);
     })
   })
-  res.send('hello');
 })
 
 router.get('/:id', (req, res) => {

@@ -4,6 +4,7 @@ app.controller('BreweryController', ['$http', function($http) {
   const controller = this;
   this.breweries = [];
   this.locations = [];
+  let breweryData = [];
   this.brewery = {};
 
   this.findBreweriesByZip = function(){
@@ -59,16 +60,16 @@ app.controller('BreweryController', ['$http', function($http) {
     })
   }
 
-  this.saveBrewery = function(){
+  this.saveBrewery = function(index){
     $http({
       method: 'POST',
       url: 'users/getBreweryData',
       data: {
-        breweryData: controller.breweries[p]
+        breweryData: controller.breweryData
       }
     }).then(
       function(response){
-
+        console.log(response)
       },
       function(error){
 
