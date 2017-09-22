@@ -27,6 +27,7 @@ app.controller('BreweryController', ['$http', function($http) {
       }
   }
 
+
   this.findBreweriesByCity = function(){
     $http({
       method: 'GET',

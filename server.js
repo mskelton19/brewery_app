@@ -7,6 +7,7 @@ const LocalStrategy 					=		require('passport-local');
 const passportLocalMongoose 	= 	require('passport-local-mongoose');
 const User 										=		require('./models/users.js')
 const session 								=		require('express-session');
+require('dotenv').config();
 
 app.use(require('express-session')({
 	secret: 'I am Brother Nature',

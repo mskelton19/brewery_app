@@ -9,7 +9,7 @@ const rp = require('request-promise');
 
 
 router.get('/', (req, res) => {
-  rp({uri:'http://api.brewerydb.com/v2/locations?postalCode=28801&key=18332a604bfda0ef56cfa29deff412f2', json: true})
+  rp({uri:'http://api.brewerydb.com/v2/locations?postalCode=28801&key='+ apiKey, json: true})
 .then(function(response) {
   res.send(response)
 })
