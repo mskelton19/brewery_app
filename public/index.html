@@ -49,23 +49,44 @@
 
       <div class='brewery'>
         <ul>
-          <li data-ng-repeat='breweries in brewCtrl.breweries'>
+          <li class='breweries' ng-repeat='brewery in brewCtrl.breweries'>
 
-             <!-- <img class='breweryImg' ng-src='{{breweries.images.large}}'><br>
+            <img ng-src='{{brewery.brewery.images.squareMedium}}'><br>
+            {{brewery.brewery.name}}<br>
+            Address: {{brewery.streetAddress}}, {{brewery.locality}} {{brewery.postalCode}}
+            <form ng-submit='brewCtrl.saveBrewery(brewery)'>
+              <input type='submit' value='Save Brewery'>
+            </form>
+
+
+          </li>
+        </ul>
+
+      </div>
+
+          <!-- {{breweries[0]}} -->
+
+
+
+          <!-- <img class='breweryImg' ng-src='{{breweries[t].brewery.images.large}}'><br>
            <h4>{{breweries.images.icon}}</h4> -->
 
-           <div class='container'>
+
+
+           <!-- <div class='container'>
              <div class='row'>
              <div class='col'>
               <div class='breweries'>
                 <a ng-href='{{breweries[0].brewery.website}}'><img ng-src='{{breweries[0].brewery.images.squareMedium}}'></a>
                 <h6>{{breweries[0].brewery.name}}</h6>
 
-
               </div>
               <div class='breweries'>
                 <a ng-href='{{breweries[1].brewery.website}}'><img ng-src='{{breweries[1].brewery.images.squareMedium}}'></a>
                 <h6>{{breweries[1].brewery.name}}</h6>
+                <form ng-submit='brewCtrl.saveBrewery(brewery)'>
+                  <input type='submit' value='Save Brewery'>
+                </form>
 
               </div>
               <div class='breweries'>
@@ -84,7 +105,7 @@
               </div>
             </div>
           </div>
-          </div>
+          </div> -->
 
         <!-- <form ng-submit='brewCtrl.findBreweriesByCity()'>
           <input class='inputs' ng-model='brewCtrl.city' type='text' placeholder='City' value='submit'>
@@ -105,9 +126,9 @@
                 <h4>{{locations[1].name}}</h4>
                 <h4>{{locations[1].locality}}</h4> -->
 
-            </ul>
-        </li>
-      </ul>
+            <!-- </ul> -->
+        <!-- </li>
+      </ul> -->
 
 
 
