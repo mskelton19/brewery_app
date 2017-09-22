@@ -4,6 +4,7 @@ app.controller('BreweryController', ['$http', function($http) {
   const controller = this;
   this.breweries = [];
   this.locations = [];
+  this.brewery = {};
 
   this.findBreweriesByZip = function(){
     $http({
@@ -14,10 +15,13 @@ app.controller('BreweryController', ['$http', function($http) {
           zip: this.zip
         }
     }).then(function(response){
-      this.foundBreweryByZip = response.data.data
-      controller.breweries.push(this.foundBreweryByZip)
-      console.log(foundBreweryByZip)
-      console.log(controller.zip)
+      console.log('here is a response:', response);
+      console.log(response.data.data);
+      controller.breweries = response.data.data
+      // this.foundBreweryByZip = response.data.data
+      // controller.breweries.push(this.foundBreweryByZip)
+      // console.log(foundBreweryByZip)
+      // console.log(controller.zip)
     }),
       function(err){
       }
@@ -54,6 +58,22 @@ app.controller('BreweryController', ['$http', function($http) {
       // console.log(foundLocation)
     })
   }
+
+  this.saveBrewery = function(){
+    $http({
+      method: 'POST',
+      url: 'users/getBreweryData',
+      data: {
+        breweryData: controller.breweries[p]
+      }
+    }).then(
+      function(response){
+
+      },
+      function(error){
+
+      });
+  };
 
 
 }]);

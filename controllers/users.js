@@ -4,9 +4,25 @@ const User            = require('../models/users.js');
 const rp              = require('request-promise');
 const bodyParser      = require('body-parser');
 const methodOverride  = require('method-override');
+const passport              = require('passport');
+const localStrategy         = require('passport-local');
+const passportLocalMongoose = require('passport-local-mongoose');
+
+
+router.use(require('express-session')({
+  secret: 'I am Brother Nature',
+  resave: false,
+  saveUninitialized: false
+}))
 
 router.use(bodyParser.urlencoded({extended: false}));
 router.use(methodOverride('_method'));
+router.use(passport.initialize());
+router.use(passport.session());
+
+passport.use(new localStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 router.get('/', (req, res) => {
   User.find({}, (err, foundUsers) => {
@@ -14,6 +30,21 @@ router.get('/', (req, res) => {
       users: foundUsers
     })
   })
+})
+
+router.post('/getBreweryData', (req, res) => {
+  console.log('==========')
+  User.create(req.body['breweryData'], (index) => {
+    User.findOne({username: req.session.username}, (err, foundUser) => {
+      foundUser['brewery'].push(req.body['breweryData']);
+      foundUser.save();
+      console.log('=========')
+      // console.log(foundUser['brewery']);
+      console.log('=============')
+      console.log(req.body['breweryData']);
+    })
+  })
+  res.send('hello');
 })
 
 router.get('/:id', (req, res) => {
@@ -53,6 +84,13 @@ router.post('/', (req, res) => {
     res.redirect('/users')
   })
 });
+
+function isLoggedIn(req, res, next){
+  if(req.isAuthenticated()){
+    return next();
+  }
+  res.redirect('/login');
+}
 
 // router.get('/:id', (req, res) => {
 //   User.findById(req.params.id, (error, User) => {

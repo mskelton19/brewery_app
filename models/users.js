@@ -4,7 +4,8 @@ const passportLocalMongoose = require('passport-local-mongoose');
 const userSchema = new mongoose.Schema({
   username: {type: String},
   password: {type: String},
-  location: {type: String}
+  location: {type: String},
+  brewery: []
 })
 
 userSchema.plugin(passportLocalMongoose);
