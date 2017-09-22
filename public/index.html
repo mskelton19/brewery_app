@@ -11,8 +11,9 @@
   </head>
   <body ng-controller='BreweryController as brewCtrl'>
 
+
     <header>
-      <h1 class='title'>SudsFinder</h1>
+      <h1 class='title'>Point-a-Pint</h1>
 
       <form class='loginForm' action='/login' method='POST'>
         Login: <input type='text' name='username' placeholder='username'>
@@ -30,7 +31,7 @@
 
 
     <div class='container-fluid'>
-      <form ng-submit='brewCtrl.findBreweriesByZip()'>
+      <form class='search' ng-submit='brewCtrl.findBreweriesByZip()'>
         <input class='inputs' ng-model='brewCtrl.zip' type='text' placeholder='Zip Code' value='submit'>
         <input class='button' type='submit' value='Search Breweries'>
       </form>

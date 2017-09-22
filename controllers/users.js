@@ -32,9 +32,6 @@ router.get('/', (req, res) => {
   })
 })
 
-router.get('/test', (req, res) => {
-  res.send(req.user)
-})
 
 router.post('/getBreweryData', (req, res) => {
   // console.log('==========')
@@ -43,11 +40,13 @@ router.post('/getBreweryData', (req, res) => {
       req.user.brewery.push(req.body['breweryData']);
       req.user.save();
       console.log(req.user);
+      res.render('/users');
       // console.log('=============');
       // console.log(req.body['breweryData']);
+
 })
 
-router.get('/:id', (req, res) => {
+router.get('/:id', isLoggedIn, (req, res) => {
   User.findById(req.params.id, (err, foundUser) => {
     res.render('users/show.ejs', {
       user: foundUser

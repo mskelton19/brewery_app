@@ -8,8 +8,16 @@ div {
   top: -30px;
 }
 
+body {
+  background-image: url('https://scontent.fagc3-2.fna.fbcdn.net/v/t1.0-9/13438873_1223571121121599_4281942155979201876_n.jpg?oh=aeb3cab4b6d684301ad4625c05912bf4&oe=5A496428');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 header {
-  background: lightblue;
+  background-color: lightblue;
   height: 75px;
   margin-bottom: 20px;
 }
@@ -17,22 +25,23 @@ header {
 header h1 {
   position: relative;
   left: 25px;
-  top: 10px;
+  top: 13px;
 }
 
 .breweries {
-  width: 75%;
+  width: 50%;
   color: green;
   diplay: block;
   margin: 0 auto;
   height: 25%;
   text-align: center;
   position: relative;
-  right: 17px;
+  right: 20px;
+  margin-bottom: 20px;
 }
 
 .breweries img {
-  width: 65%;
+  width: 35%;
   margin: auto;
 }
 
@@ -46,6 +55,10 @@ header h1 {
 
 form {
   text-align: center;
+}
+
+.search {
+  margin-bottom: 25px;
 }
 
 /*header {

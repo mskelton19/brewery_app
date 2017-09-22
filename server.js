@@ -40,7 +40,7 @@ app.get('/secret',isLoggedIn, (req, res) => {
 })
 
 // Auth Routes
-app.get('/register', (req, res) => {
+app.get('/register',(req, res) => {
 	res.render('register.ejs')
 })
 
@@ -48,7 +48,7 @@ app.post('/register', (req, res) => {
 	req.body.username
 	req.body.password
 	req.body.location
-	User.register(new User({username: req.body.username}, {location: req.body.location}), req.body.password, function(err, user){
+	User.register(new User({username: req.body.username, location:req.body.location}), req.body.password, function(err, user){
 		if(err) {
 			console.log(err);
 			return res.render('register');
