@@ -60,6 +60,13 @@ app.controller('BreweryController', ['$http', function($http) {
     })
   }
 
+  this.getMaps = function () {
+    $http({
+      method: 'GET',
+      url: ''
+    })
+  }
+
   this.saveBrewery = function(index){
     $http({
       method: 'POST',

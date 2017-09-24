@@ -32,7 +32,8 @@ passport.deserializeUser(User.deserializeUser());
 // =========
 
 app.get('/test', (req, res) => {
-	res.send(req.user)
+	res.send(req.user);
+	console.log(req.user)
 })
 
 app.get('/secret',isLoggedIn, (req, res) => {

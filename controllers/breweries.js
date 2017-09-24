@@ -22,6 +22,8 @@ router.get('/:postalCode', (req, res) => {
     })
   })
 
+
+
 // router.get('/', (req, res) => {
 //   console.log(req.params)
 //   p({uri: 'http://api.brewerydb.com/v2/locations?locality=Raleigh&key=' + apiKey, json: true})

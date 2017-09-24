@@ -24,7 +24,7 @@ passport.use(new localStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-router.get('/', (req, res) => {
+router.get('/', isLoggedIn, (req, res) => {
   User.find({}, (err, foundUsers) => {
     res.render('users/index.ejs',{
       users: foundUsers
@@ -33,7 +33,7 @@ router.get('/', (req, res) => {
 })
 
 
-router.post('/getBreweryData', (req, res) => {
+router.post('/getBreweryData', isLoggedIn, (req, res) => {
   // console.log('==========')
   // User.create(req.body['breweryData'], () => {
   //   User.findOne({username: req.session.username}, (err, foundUser) => {
