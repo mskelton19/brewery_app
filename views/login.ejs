@@ -1,7 +1,73 @@
-<h1>Login</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  </head>
+  <body>
 
-<form action='/login' method='POST'>
-  <input type='text' name='username' placeholder='username'>
-  <input type='password' name='password' placeholder='password'>
-  <button>Login</button>
-</form>
+  <header class='header'>
+      <h1 class='title'><a class='link' href='/'>Point-a-Pint</a></h1>
+  </header>
+
+
+<div class='form'>
+    <h1>Login</h1>
+
+
+      <form action='/login' method='POST'>
+        <input type='text' name='username' placeholder='username'><br>
+        <input type='password' name='password' placeholder='password'><br><br>
+        <button>Login</button>
+      </form>
+    </div>
+
+  </body>
+</html>
+
+<style>
+
+body {
+  background-image: url('https://scontent.fagc3-2.fna.fbcdn.net/v/t1.0-9/13438873_1223571121121599_4281942155979201876_n.jpg?oh=aeb3cab4b6d684301ad4625c05912bf4&oe=5A496428');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+header {
+  background-color: #A33028;
+  height: 75px;
+  color: white;
+  width: 100%;
+}
+
+header h1 {
+  position: relative;
+  left: 25px;
+  top: 13px;
+}
+
+.form {
+  background-color: white;
+  width: 50%;
+  height: 50%;
+  margin: 0 auto;
+  position: relative;
+  top: 200px;
+  text-align: center;
+  border: 1px solid #A33028;
+  padding-bottom: 15px;
+  background-color: #AF5F59;
+  color: white;
+}
+
+.link {
+  color: white;
+  list-style-type: none;
+  text-decoration: none;
+  outline: none;
+}
+
+</style>
