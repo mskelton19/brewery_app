@@ -10,7 +10,6 @@ User stories
 
 MVP
 - User auth
-- Google Maps
 - Connect to brewery API
 - Users are able to like and save breweries
 - CRUD on users
