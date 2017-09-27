@@ -99,6 +99,14 @@ nav a {
 .button {
   margin-top: 10px;
 }
+
+.breweryDB {
+  position: relative;
+  bottom: -500px;
+  width:30%;
+  margin: 0 auto;
+}
+
 /*header {
   background-color: B9AFA4;
   height: 75px;
