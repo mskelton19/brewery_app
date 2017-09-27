@@ -40,12 +40,17 @@
 
 
   <div class='content'>
-    <div class='container-fluid'>
+    <div class='container'>
+      <div class='row'>
+        <div class='col'>
       <form class='search' ng-submit='brewCtrl.findBreweriesByZip()'>
-        <input class='inputs' ng-model='brewCtrl.zip' type='text' placeholder='Zip Code' value='submit'>
-        <input class='button' type='submit' value='Search Breweries'>
+        <input class='inputs' ng-model='brewCtrl.zip' type='text' placeholder='Zip Code' value='submit'><br>
+        <input class='button' type='submit' value='Find Breweries'>
       </form>
     </div>
+  </div>
+</div>
+</div>
 
 
         <!-- <div class='col'>

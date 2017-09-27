@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Users</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
   </head>
   <body>
 
@@ -10,13 +11,13 @@
       <header class='header'>
         <div class='container-fluid'>
 
-        <h1 class='title'>Point-a-Pint</h1>
+        <h1 class='title'><a href='/'>Point-a-Pint</a></h1>
 
-        <form class='loginForm' action='/login' method='POST'>
+        <!-- <form class='loginForm' action='/login' method='POST'>
           Login: <input type='text' name='username' placeholder='username'>
           <input type='password' name='password' placeholder='password'>
           <button>Submit</button>
-        </form>
+        </form> -->
       </div>
       </header>
 
@@ -31,7 +32,8 @@
                 <%for(let i = 0; i < users.length; i++) { %>
                   <li>
                     <a href="/users/<%=users[i].id%>">
-                    <%=users[i].username%></a>
+                    <%=users[i].username%></a><br>
+                    Location: <%=users[i].location%><br><br>
                   </li>
                 <% } %>
               </ul>
@@ -82,12 +84,24 @@ header h1 {
 .pageTitle {
   color: blue;
   text-align: center;
+  margin-top: 25px;
+  color: #A33028;
 }
 
 .users {
   /*background-color: white;*/
+  margin: 0 auto;
   background-color: orange;
   text-align: center;
+  width: 50%;
+  margin-top: 25px;
+  border: 1px solid #A33028;
+  background-color: #AF5F59;
+}
+
+.users li {
+  position: relative;
+  right: 5%;
 }
 
 

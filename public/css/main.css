@@ -50,7 +50,7 @@ header h1 {
   right: 20px;
   margin-bottom: 20px;
   border: 2px solid #A65735;
-  background-color: #C25E2A;
+  background-color: #AF5F59;
 }
 
 .breweries img {
@@ -94,6 +94,10 @@ nav a {
   color: white;
   padding-right: 15px;
   text-align: center;
+}
+
+.button {
+  margin-top: 10px;
 }
 /*header {
   background-color: B9AFA4;
