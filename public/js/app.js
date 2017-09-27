@@ -28,6 +28,7 @@ app.controller('BreweryController', ['$http', function($http) {
       }
   }
 
+
   this.findBreweriesByCity = function(){
     $http({
       method: 'GET',
@@ -60,12 +61,15 @@ app.controller('BreweryController', ['$http', function($http) {
     })
   }
 
+
   this.saveBrewery = function(index){
     $http({
       method: 'POST',
       url: 'users/getBreweryData',
       data: {
-        breweryData: controller.breweryData
+
+        breweryData: controller.breweries[index]
+
       }
     }).then(
       function(response){

@@ -8,30 +8,57 @@ div {
   top: -30px;
 }
 
+body {
+  background-image: url('https://scontent.fagc3-2.fna.fbcdn.net/v/t1.0-9/13438873_1223571121121599_4281942155979201876_n.jpg?oh=aeb3cab4b6d684301ad4625c05912bf4&oe=5A496428');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 header {
-  background: lightblue;
+  background-color: #A33028;
   height: 75px;
-  margin-bottom: 20px;
+  color: white;
+  width: 100%;
 }
 
 header h1 {
   position: relative;
   left: 25px;
-  top: 10px;
+  top: 13px;
+}
+
+
+.content {
+  position: absolute;
+  top:100px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  overflow-y:scroll;
 }
 
 .breweries {
-  width: 75%;
-  color: green;
+  width: 50%;
+  color: white;
   diplay: block;
-  margin: auto;
+  margin: 0 auto;
   height: 25%;
   text-align: center;
+  position: relative;
+  right: 20px;
+  margin-bottom: 20px;
+  border: 2px solid #A65735;
+  background-color: #C25E2A;
 }
 
 .breweries img {
-  width: 65%;
+  width: 95%;
   margin: auto;
+  border-radius: 25%;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 .breweries a {
@@ -46,6 +73,28 @@ form {
   text-align: center;
 }
 
+.search {
+  margin-bottom: 25px;
+  margin-top: 15px;
+}
+
+.save {
+  margin-bottom: 10px;
+}
+
+nav {
+  background-color: #A33028;
+  opacity: 0.7;
+  margin-bottom: 50px;
+  color: white;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  padding-right: 15px;
+  text-align: center;
+}
 /*header {
   background-color: B9AFA4;
   height: 75px;

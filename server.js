@@ -7,6 +7,7 @@ const LocalStrategy 					=		require('passport-local');
 const passportLocalMongoose 	= 	require('passport-local-mongoose');
 const User 										=		require('./models/users.js')
 const session 								=		require('express-session');
+require('dotenv').config();
 
 app.use(require('express-session')({
 	secret: 'I am Brother Nature',
@@ -29,12 +30,18 @@ passport.deserializeUser(User.deserializeUser());
 // =========
 // Routes
 // =========
+
+app.get('/test', (req, res) => {
+	res.send(req.user);
+	console.log(req.user)
+})
+
 app.get('/secret',isLoggedIn, (req, res) => {
 	res.render('secret.ejs')
 })
 
 // Auth Routes
-app.get('/register', (req, res) => {
+app.get('/register',(req, res) => {
 	res.render('register.ejs')
 })
 
@@ -42,7 +49,7 @@ app.post('/register', (req, res) => {
 	req.body.username
 	req.body.password
 	req.body.location
-	User.register(new User({username: req.body.username}, {location: req.body.location}), req.body.password, function(err, user){
+	User.register(new User({username: req.body.username, location:req.body.location}), req.body.password, function(err, user){
 		if(err) {
 			console.log(err);
 			return res.render('register');

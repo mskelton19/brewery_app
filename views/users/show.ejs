@@ -5,15 +5,52 @@
     <title></title>
   </head>
   <body>
-    <h1>User Show Page</h1>
+
+    <div class='header'>
+      <header class='header'>
+
+        <h1 class='title'>Point-a-Pint</h1>
+
+        <form class='loginForm' action='/login' method='POST'>
+          Login: <input type='text' name='username' placeholder='username'>
+          <input type='password' name='password' placeholder='password'>
+          <button>Submit</button>
+        </form>
+      </header>
+
+
+      <nav>
+        <a href='/register'>Sign Up</a>
+
+        <a href='/logout'>Logout</a>
+
+        <a href='/users'>Users</a>
+      </nav>
+    </div>
+
+    <h1><%=user.username%>'s Profile</h1>
+
+    Location: <%=user.location%>
 
     <main>
       <section>
 
-        <h3>Info</h3>
 
-        Username: <%=user.username%><br>
-        Location: <%=user.location%>
+        <% if (user.brewery.length < 1) { %>
+          <p><%=user.username%> hasn't been to any breweries.</p>
+        <% } %>
+
+
+        <ul>
+          <% for (let i = 0; i < user.brewery.length; i++) { %>
+          <li>
+            <img src='<%=user.brewery[i].brewery.images.squareMedium%>'>
+            <%=user.brewery[i].brewery.name%>
+          <% } %>
+        </li>
+      </ul>
+
+
 
       </section>
     </main>
@@ -25,3 +62,64 @@
     <a href='/users/<%=user.id%>/edit'>Edit this User</a>
   </body>
 </html>
+
+
+<style>
+
+body {
+  background-image: url('https://scontent.fagc3-2.fna.fbcdn.net/v/t1.0-9/13438873_1223571121121599_4281942155979201876_n.jpg?oh=aeb3cab4b6d684301ad4625c05912bf4&oe=5A496428');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+header {
+  background-color: #A33028;
+  height: 75px;
+  color: white;
+  width: 100%;
+}
+
+header h1 {
+  position: relative;
+  left: 25px;
+  top: 13px;
+  color: white;
+}
+
+.content {
+  position: absolute;
+  top:100px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  overflow-y:scroll;
+}
+nav {
+  background-color: #A33028;
+  opacity: 0.7;
+  margin-bottom: 50px;
+  color: white;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  padding-right: 75px;
+  text-align: center;
+}
+
+ul {
+  color: white;
+}
+
+h1 {
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+</style>

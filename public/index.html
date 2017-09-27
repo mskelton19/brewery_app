@@ -11,30 +11,42 @@
   </head>
   <body ng-controller='BreweryController as brewCtrl'>
 
-    <header>
-      <h1 class='title'>SudsFinder</h1>
+  <div class='header'>
+    <header class='header'>
+      <div class='container-fluid'>
+
+      <h1 class='title'>Point-a-Pint</h1>
 
       <form class='loginForm' action='/login' method='POST'>
         Login: <input type='text' name='username' placeholder='username'>
         <input type='password' name='password' placeholder='password'>
         <button>Submit</button>
       </form>
-
-  </header>
-
-  <nav>
-    <a href='/register'>Sign Up</a>
-
-    <a href='/logout'>Logout</a>
-  </nav>
+    </div>
+    </header>
 
 
+    <nav>
+      <a href='/register'>Sign Up</a>
+
+      <a href='/login'>Login</a>
+
+      <a href='/logout'>Logout</a>
+
+      <a href='/users'>Users</a>
+    </nav>
+  </div>
+
+
+
+  <div class='content'>
     <div class='container-fluid'>
-      <form ng-submit='brewCtrl.findBreweriesByZip()'>
+      <form class='search' ng-submit='brewCtrl.findBreweriesByZip()'>
         <input class='inputs' ng-model='brewCtrl.zip' type='text' placeholder='Zip Code' value='submit'>
         <input class='button' type='submit' value='Search Breweries'>
       </form>
     </div>
+
 
         <!-- <div class='col'>
           <form ng-submit='brewCtrl.findBreweriesByCity()'>
@@ -54,9 +66,14 @@
             <img ng-src='{{brewery.brewery.images.squareMedium}}'><br>
             {{brewery.brewery.name}}<br>
             Address: {{brewery.streetAddress}}, {{brewery.locality}} {{brewery.postalCode}}
-            <form ng-submit='brewCtrl.saveBrewery($index)'>
+
+            <form class='save' ng-submit='brewCtrl.saveBrewery($index)'>
+
               <input type='submit' value='Save Brewery'>
             </form>
+            <!-- <form class='maps' ng-submit='brewCtrl.getMaps'>
+              <input type='submit' value='Get Map'>
+            </form> -->
 
 
           </li>
@@ -131,6 +148,6 @@
       </ul> -->
 
 
-
+    </div>
   </body>
 </html>

@@ -6,21 +6,91 @@
   </head>
   <body>
 
-    <h1>Users</h1>
+    <div class='header'>
+      <header class='header'>
+        <div class='container-fluid'>
 
+        <h1 class='title'>Point-a-Pint</h1>
 
-    <main>
-      <ul>
-        <%for(let i = 0; i < users.length; i++) { %>
-          <li>
-            <a href="/users/<%=users[i].id%>">
-            <%=users[i].username%></a>
-          </li>
-        <% } %>
-      </ul>
-    </main>
+        <form class='loginForm' action='/login' method='POST'>
+          Login: <input type='text' name='username' placeholder='username'>
+          <input type='password' name='password' placeholder='password'>
+          <button>Submit</button>
+        </form>
+      </div>
+      </header>
+
+    <h1 class='pageTitle'>Users</h1>
+
+    <div class='users'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col'>
+            <main>
+              <ul>
+                <%for(let i = 0; i < users.length; i++) { %>
+                  <li>
+                    <a href="/users/<%=users[i].id%>">
+                    <%=users[i].username%></a>
+                  </li>
+                <% } %>
+              </ul>
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 
   </body>
+
+<style>
+
+body {
+  background-image: url('https://scontent.fagc3-2.fna.fbcdn.net/v/t1.0-9/13438873_1223571121121599_4281942155979201876_n.jpg?oh=aeb3cab4b6d684301ad4625c05912bf4&oe=5A496428');
+  background-position: center center;    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+}
+
+li {
+  color: white;
+  text-align: center;
+  list-style-type: none;
+  font-size: 24px;
+}
+
+a {
+  color: white;
+}
+
+header {
+  background-color: #A33028;
+  height: 75px;
+  color: white;
+  width: 100%;
+}
+
+header h1 {
+  position: relative;
+  left: 25px;
+  top: 13px;
+}
+
+.pageTitle {
+  color: blue;
+  text-align: center;
+}
+
+.users {
+  /*background-color: white;*/
+  background-color: orange;
+  text-align: center;
+}
+
+
+
+</style>
 </html>
