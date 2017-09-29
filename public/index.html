@@ -71,7 +71,9 @@
             <img ng-src='{{brewery.brewery.images.squareMedium}}'><br>
             {{brewery.brewery.name}}<br>
             Address: {{brewery.streetAddress}}, {{brewery.locality}} {{brewery.postalCode}}
+
             <form class='save' ng-submit='brewCtrl.saveBrewery($index)'>
+
               <input type='submit' value='Save Brewery'>
             </form>
             <!-- <form class='maps' ng-submit='brewCtrl.getMaps'>

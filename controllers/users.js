@@ -33,16 +33,17 @@ router.get('/', isLoggedIn, (req, res) => {
 })
 
 
-router.post('/getBreweryData', isLoggedIn, (req, res) => {
-  // console.log('==========')
-  // User.create(req.body['breweryData'], () => {
-  //   User.findOne({username: req.session.username}, (err, foundUser) => {
-      req.user.brewery.push(req.body['breweryData']);
-      req.user.save();
-      console.log(req.user);
-      res.render('/users');
+router.post('/getBreweryData', (req, res) => {
+  console.log('==========')
+  User.create(req.body['breweryData'], () => {
+    User.findOne({username: req.session.username}, (err, foundUser) => {
+      foundUser['brewery'].push(req.body['breweryData']);
+      foundUser.save();
+      console.log(foundUser);
       // console.log('=============');
       // console.log(req.body['breweryData']);
+    })
+  })
 
 })
 
