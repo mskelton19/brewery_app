@@ -27,8 +27,11 @@ header {
   .header {
     height:120px;
   }
-  .button {
-    background-color: gray;
+  header button {
+    width: 75px;
+  }
+  header input {
+    width: 75px;
   }
 }
 
@@ -71,7 +74,7 @@ header h1 {
   margin-bottom: 20px;
   border: 2px solid #A65735;
   background-color: #AF5F59;
-  margin-top: 25px;
+  margin-top: 45px;
 }
 
 @media(max-width: 675px) {
@@ -94,19 +97,24 @@ header h1 {
 
 .brewery li {
   list-style-type: none;
+  padding-top: 0px;
 }
 
 form {
   text-align: center;
+  margin-bottom: 15px;
 }
 
 .title h1 {
   margin: 5px;
 }
 
-.content .col {
-  margin-bottom: 45px;
-  margin-top: 75px;
+.input button {
+  margin: 15px;
+}
+
+button {
+  margin-bottom: 25px;
 }
 
 .save {
@@ -145,6 +153,10 @@ nav a {
   width:30%;
   margin: 0 auto;
   background-color: white;
+}
+
+.search {
+  margin-top: 75px;
 }
 
 footer {
