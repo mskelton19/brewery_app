@@ -7,23 +7,29 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src='js/app.js' charset='utf-8'></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel='stylesheet' type='text/css' href='/css/main.css'>
+    <link rel='stylesheet' type='text/css' href='css/main.css'>
   </head>
   <body ng-controller='BreweryController as brewCtrl'>
 
   <div class='header'>
     <header class='header'>
       <div class='container-fluid'>
-
-      <h1 class='title'>Point-a-Pint</h1>
-
-      <form class='loginForm' action='/login' method='POST'>
-        Login: <input type='text' name='username' placeholder='username'>
-        <input type='password' name='password' placeholder='password'>
-        <button>Submit</button>
-      </form>
+        <div class='row'>
+          <div class='col'>
+            <h1 class='title'>Point-a-Pint</h1>
+          </div>
+          <div class='col'>
+            <form class='loginForm' action='/login' method='POST'>
+            Login: <input type='text' name='username' placeholder='username'>
+            <input type='password' name='password' placeholder='password'>
+            <button>Submit</button>
+          </form>
+        </div>
+      </div>
     </div>
     </header>
+    </div>
+
 
 
     <nav>
