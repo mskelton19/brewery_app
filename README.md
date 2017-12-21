@@ -4,8 +4,8 @@ The hardest thing about being a part of the craft beer community is staying up t
 
 This is a MEAN stack multi-page app with Passport for authentication. I used Bootstrap on the CSS to make it mobile friendly as that is the ultimate goal of the app. I still have some work to do to make it fully responsive. There is full CRUD on the users. The third party API is through BreweryDB.
 
+This was my last project while taking classes at General Assembly. During the two weeks we had to design and code this project, we were also working on our personal portfolio pages. Once I got to MVP on this app, I switched my focus to my portfolio page.
+
 Ultimately this is just the skeleton of what I would like to do. While the API was difficult to handle at the outset, the more accustomed you get to its documentation, the easier it is to maneuver. I would still like to add a city search function, as well as research ways to find the users current location so the search function isn't as necessary.
 
 In addition to some of the search functionality, I would like to create EJS options to show additional information on all the breweries. As a stretch goal, I set out to have a google map associated with every brewery but didn't have the time to implement that functionality. That was my biggest letdown on this project and will be something I circle back to.
-
-
